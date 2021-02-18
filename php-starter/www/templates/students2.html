@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block body %}
+    <h1>Studentoversikt</h1>
+    <!--
+    <pre>
+        {{ dump(students) }}
+    </pre>
+    -->
+    {%if students %}
+        <table>
+            <thead>
+                <th>Fornavn</th>
+                <th>Etternavn</th>
+            </thead>
+            <tbody>
+                {% for student in students %}
+                <tr>
+                    <td>{{ student.getGivenName() }}</td>
+                    <td><a href="?id={{ student.getLastName()  }}">{{ student.getLastName()  }}</a></td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    {% endif %}
+{% endblock %}
