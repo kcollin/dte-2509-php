@@ -6,7 +6,7 @@
  */
 class DB {
   private static $db=null;
-  private $dsn = 'mysql:dbname=myDb;host=db';
+  private $dsn = 'mysql:dbname=myDb;host=db;charset=utf8';
   private $user = 'user';
   private $password = 'test';
   private $dbh = null;

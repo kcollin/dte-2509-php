@@ -17,6 +17,6 @@ if ($result) {
     echo $twig->render('students2.html', array('students' => $students));
     //var_dump($students);
 } else {
-    echo $twig->render('error.html',(array('status'=>'FAIL', 'msg'=>'Unable to get users', 'status'=>$stmt->errorInfo())));
+    echo $twig->render('error.html',(array('status'=>'FAIL', 'msg'=>'Unable to get users', 'errorInfo'=>$stmt->errorInfo())));
 }
 ?>
